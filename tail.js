@@ -1,23 +1,34 @@
+const eqArrays = function(firstArray, secondArray) {
+  for (let i = 0; i <= firstArray.length; i++) {
+    if (firstArray[i] !== secondArray[i]) {
+      return false;
+    }
+  }
+  return true;
+};
+
+const assertArraysEqual = function(arrayOne, arrayTwo) {
+  if (eqArrays(arrayOne, arrayTwo) === true) {
+    console.log(`✅✅✅ Assertion Passed: ${arrayOne} === ${arrayTwo}`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: ${arrayOne} !== ${arrayTwo}`);
+  }
+};
+
 const tail = function(array) {
   let newArray = array.slice(1);
   return newArray;
 };
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 let array = [1, 2, 3];
-assertEqual(tail([1, 2, 3]).length, array.slice(1).length);
+assertArraysEqual(tail([1, 2, 3]), [2,3]);
 
 const testArray = ["Hello", "Lighthouse", "Labs"];
-tail(testArray);
-assertEqual(tail(testArray), ["Lighthouse", "Labs"]);
+assertArraysEqual(tail(testArray), ["Lighthouse", "Labs"]);
 
 const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words);
-assertEqual(words.length, 3);
+assertArraysEqual(tail(words),["Lighthouse", "Labs"]);
+
+console.log(array);
+console.log(testArray);
+console.log(words);
