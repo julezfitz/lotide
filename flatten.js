@@ -29,10 +29,13 @@ const flatten = function(input) {
       }
     }
   }
-  console.log(newArray);
+  return newArray;
 };
 
+//Test assertions
 let originalArray = [1, 2, [3, 4], 5, [6]];
-flatten(originalArray); // => [1, 2, 3, 4, 5, 6]
 console.log(originalArray); // Original array is not changed
-assertArraysEqual(originalArray, [1, 2, [3, 4], 5, [6]]);
+assertArraysEqual(flatten(originalArray), [1, 2, 3, 4, 5, 6]);
+
+const newArray = [[34,5],6,5,7,[78,3,2]];
+assertArraysEqual(flatten(newArray), [34,5,6,5,7,78,3,2]);
