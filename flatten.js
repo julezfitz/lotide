@@ -34,5 +34,5 @@ const flatten = function(input) {
 
 let originalArray = [1, 2, [3, 4], 5, [6]];
 flatten(originalArray); // => [1, 2, 3, 4, 5, 6]
-//console.log(originalArray);
-//assertArraysEqual(originalArray, [1, 2, [3, 4], 5, [6]]);
+console.log(originalArray); // Original array is not changed
+assertArraysEqual(originalArray, [1, 2, [3, 4], 5, [6]]);
