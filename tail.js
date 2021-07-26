@@ -1,4 +1,4 @@
-const eqArrays = function (firstArray, secondArray) {
+const eqArrays = function(firstArray, secondArray) {
   if (firstArray.length !== secondArray.length) {
     return false;
   }
@@ -23,6 +23,8 @@ const tail = function(array) {
   return newArray;
 };
 
+//Test assertions
+
 let array = [1, 2, 3];
 assertArraysEqual(tail([1, 2, 3]), [2,3]);
 
@@ -32,6 +34,7 @@ assertArraysEqual(tail(testArray), ["Lighthouse", "Labs"]);
 const words = ["Yo Yo", "Lighthouse", "Labs"];
 assertArraysEqual(tail(words),["Lighthouse", "Labs"]);
 
+//Check that original arrays are unchanged
 console.log(array);
 console.log(testArray);
 console.log(words);
