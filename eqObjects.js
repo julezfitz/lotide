@@ -64,9 +64,8 @@ assertEqual(eqObjects(obj5, obj6), false);
 assertEqual(eqObjects(obj7, obj8), true);
 assertEqual(eqObjects(obj9, obj10), true);
 
-
-// eqObjects(, ) // => true
-// eqObjects(, ) // => false
-// eqObjects(, ) // => false
+const object1 = { a: '1', b: 2 };
+const object3 = { a: '1', b: 2, c: 43};
+assertEqual(eqObjects(object1, object3), false);
 
 module.exports = eqObjects;
