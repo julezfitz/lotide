@@ -22,3 +22,5 @@ assertArraysEqual(flatten(originalArray), [1, 2, 3, 4, 5, 6]);
 
 const newArray = [[34,5],6,5,7,[78,3,2]];
 assertArraysEqual(flatten(newArray), [34,5,6,5,7,78,3,2]);
+
+module.exports = flatten;
