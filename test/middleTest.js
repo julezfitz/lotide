@@ -1,18 +1,14 @@
-const eqArrays = require('../eqArrays.js');
-const assertArraysEqual = require('../assertArraysEqual.js');
 const middle = require('../middle.js');
+const assert = require('chai').assert;
 
-
-//Test Assertions
-middle([1,2,3,4,5]);
-middle([1,2,3,4]);
-middle([1]);
-
-const testArray = [3,4,5,6,7,8,9,10];
-const testArray2 = [3];
-const testArray3 = [4,5,6,7,8,9,1];
-
-assertArraysEqual(middle(testArray),[6,7]);
-assertArraysEqual(middle(testArray2),[]);
-assertArraysEqual(middle(testArray3),[7]);
-assertArraysEqual(testArray, [3,4,5,6,7,8,9,10]); //Does not modify original array.
+describe("#middle", () => {
+  it("returns [6, 7] for [3,4,5,6,7,8,9,10]", () => {
+    assert.deepEqual(middle([3,4,5,6,7,8,9,10]), [6, 7]);
+  });
+  it("returns [] for [3]", () => {
+    assert.deepEqual(middle([3]), []);
+  });
+  it("returns [7] for [4,5,6,7,8,9,1]", () => {
+    assert.deepEqual(middle([4,5,6,7,8,9,1]), [7]);
+  });
+});
