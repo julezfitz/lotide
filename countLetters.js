@@ -16,6 +16,8 @@ const countLetters = function(sentence) {
 };
 
 const result1 = countLetters("apple I ate");
+const result2 = countLetters("Apple I ate");
+
 
 assertEqual(result1["p"], 2);
 assertEqual(result1["z"], undefined);
