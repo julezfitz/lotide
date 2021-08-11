@@ -2,7 +2,6 @@
   "name": "@julezfitz/lotide",
   "version": "1.0.0",
   "description": "A mini clone of the [Lodash](https://lodash.com) library. Completed as part of course work at Lighthouse Labs",
-  "author":"Julie Fitzpatrick <juliemfitzpatrick@gmail.com>",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -14,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/julezfitz/lotide.git"
   },
-  "author": "",
+  "author": "Julie Fitzpatrick <juliemfitzpatrick@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/julezfitz/lotide/issues"
