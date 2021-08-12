@@ -4,6 +4,7 @@ const assert = require('chai').assert;
 //Test assertions
 let originalArray = [1, 2, [3, 4], 5, [6]];
 const newArray = [[34, 5], 6, 5, 7, [78, 3, 2]];
+const multiNestArray = [[34, [5, 0, 0]], 6, 5, 7, [78, 3, 2]];
 
 describe("#flatten", () => {
   it("returns [1, 2, 3, 4, 5, 6] for [1, 2, [3, 4], 5, [6]]", () => {
