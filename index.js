@@ -14,6 +14,7 @@ const flatten = require('./flatten.js');
 const letterPositions = require('./letterPositions.js');
 const map = require('./map.js');
 const takeUntil = require('./takeUntil.js');
+const without = require('./without.js');
 
 module.exports = {
   head,
@@ -31,5 +32,6 @@ module.exports = {
   flatten,
   letterPositions,
   map,
-  takeUntil
+  takeUntil,
+  without
 };
