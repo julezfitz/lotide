@@ -1,5 +1,3 @@
-const assertEqual = require('./assertEqual.js');
-
 const countLetters = function(sentence) {
   const results = {};
 
@@ -14,15 +12,5 @@ const countLetters = function(sentence) {
   }
   return results;
 };
-
-const result1 = countLetters("apple I ate");
-const result2 = countLetters("Apple I ate");
-
-
-assertEqual(result1["p"], 2);
-assertEqual(result1["z"], undefined);
-assertEqual(result1["a"], 2);
-assertEqual(result1["l"], 1);
-assertEqual(result1[" "], undefined);
 
 module.exports = countLetters;
